@@ -1,12 +1,20 @@
 print("Welcome,")
 Name = input("Enter Subject Code: " )
-print("Your Subject Code is : ",Name,"\n\n")
+
 print("Enter Your  CA Marks")
 M1 = (int(input("Enter CA-1 Marks : ")))
 M2 = (int(input("Enter CA-2 Marks : ")))
 M3 = (int(input("Enter CA-3 Marks : ")))
+if(M1 >30):
+    M1 = (int(input("Enter CA-1 Marks Again: ")))
+if(M2 >30):
+    M2 = (int(input("Enter CA-2 Marks Again: ")))
+if(M3 >30):
+    M3 = (int(input("Enter CA-3 Marks Again: ")))
 Att= int(input("Enter Your Attendence %: "))
 Mid = int(input("Enter Your Mid Marks(Out of 20): "))
+if(Mid > 20):
+    Mid = int(input("Enter the correct marks : "));
 #Finding First Best Of Two CAS
 if(M1 > M3 and M1>M2):
         N1 = M1;
@@ -26,6 +34,7 @@ for i in range(2,n):
 	elif list1[i]>N2 and \
 		mx != list1[i]:
 		N2=list1[i]
+print("||Your Subject Code is : ",Name,"||\n\n")
 print("Your First Best CA is :" ,N1)
 print("Your Second Best CA is :" ,N2,"\n\n\n")
 #Finding Average of two CA's
@@ -45,6 +54,7 @@ elif(Att>=75):
 else:
     A1 = 0;
     print('"YOU HAVE TO GIVE  A REAPPEAR"')
+
 print("For ",Att,"% you have got ",A1,"Marks","\n \n \n")
 print("Mid =",Mid,"\n","Attendence marks =",A1,"\n","Avg25 =",Avg25,"\n \n \n")
 print("out of 50 marks you got : ",Avg25+Mid+A1)
